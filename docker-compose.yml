@@ -1,0 +1,25 @@
+services:
+    app:
+        container_name: faturdocker-app
+        build: .
+        depends_on:
+            - mysql_db
+        volumes:
+          - .:/var/www/html
+          - ./docker/apache/apache.conf:/etc/apache2/sites-available/000-default.conf
+        ports:
+          - 9000:80
+
+    mysql_db:
+        container_name: faturdocker-mysql
+        image: mysql:8.0
+        ports:
+          - "33068:3306"
+        volumes:
+          - ./docker/mysql/data:/var/lib/mysql
+          - ./docker/mysql/init:/docker-entrypoint-initdb.d
+        environment:
+          MYSQL_ROOT_PASSWORD: secret
+          MYSQL_DATABASE: faturdocker
+          MYSQL_USER: user
+          MYSQL_PASSWORD: password
