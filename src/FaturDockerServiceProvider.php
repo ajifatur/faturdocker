@@ -43,6 +43,7 @@ class FaturDockerServiceProvider extends ServiceProvider
             'faturdocker' => [
                 "{$publishablePath}/docker" => base_path('docker'),
                 "{$publishablePath}/docker-compose.yml" => base_path('docker-compose.yml'),
+                "{$publishablePath}/DockerFile" => base_path('DockerFile'),
             ],
         ];
 
