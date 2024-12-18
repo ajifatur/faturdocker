@@ -52,6 +52,16 @@ docker-compose build
 docker-compose up -d
 ```
 
+### Additional:
+
+Add this into `.gitignore` file to ignore files or directories in your Git:
+
+``` sh
+/docker
+docker-compose.yml
+DockerFile
+```
+
 ### Enjoy!
 
 Open `http://localhost:9000` because the web server is on `9000` port.
