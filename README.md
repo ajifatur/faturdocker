@@ -1,4 +1,4 @@
-# FaturHelper
+# FaturDocker
 
 <p align="center">
   <a href="https://packagist.org/packages/ajifatur/faturdocker"><img src="https://poser.pugx.org/ajifatur/faturdocker/d/total.svg" alt="Total Downloads"></a>
